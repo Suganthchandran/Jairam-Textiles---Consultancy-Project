@@ -1,0 +1,46 @@
+.title-main{
+    display: flex;
+    gap: 1.3rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.title-p{
+    /* font-size: 2rem; */
+    font-weight: 500;
+    color: rgb(118, 118, 118);
+}
+
+.title-span{
+    margin-left: 0.8rem;
+    /* font-size: 2rem; */
+    font-weight: 600;
+    color: black;
+}
+
+.title-line{
+    width: 5rem;
+    height: 1px;
+    margin-top: 7px;
+    color: black;
+}
+
+@media (max-width:950px) {
+    
+    .title-p,.title-span{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:750px) {
+    .title-line{
+        display: none;
+    }
+}
+
+@media (max-width:450px) {
+   
+    .title-p,.title-span{
+        font-size: 1.5rem;
+    }
+}

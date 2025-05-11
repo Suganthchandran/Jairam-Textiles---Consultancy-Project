@@ -1,0 +1,59 @@
+.about {
+    margin-top: 3rem;
+    padding: 2rem 12%;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+.about-content-image {
+    width: 600px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.about-content-para-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: -30px;
+    color: gray;
+    font-family: karla;
+    font-size: 1.075rem;
+    line-height: 1.5rem;
+}
+
+.about-content-mission-head {
+    font-size: 1.3rem;
+    color: rgb(24, 24, 24);
+    margin-bottom: -10px;
+}
+
+.about-content-choose-box-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+}
+
+.about-content-choose-box {
+    border: 1px solid black;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    color: grey;
+}
+
+.about-content-choose-box-head {
+    color: black;
+    font-size: 1.05rem;
+    font-family: mooli;
+}

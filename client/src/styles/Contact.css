@@ -1,0 +1,48 @@
+.contact {
+    margin-top: 3rem;
+    padding: 2rem 17%;
+}
+
+.contact-main {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-top: 4rem;
+    margin-bottom: 7rem;
+}
+
+.contact-main-image {
+    width: 600px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.contact-content-head {
+    font-size: 1.5rem !important;
+    color: black !important;
+    font-weight: 600;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    gap:2.2rem;
+    font-size: 1.2rem;
+    margin-top: 4.5rem;
+    color: grey;
+    font-family: karla;
+}
+
+.contact-jobs-desc {
+    margin-top: -20px;
+}
+
+.contact-button {
+    background-color: black;
+    color: white;
+    font-size: 1.2rem;
+    width: 40%;
+    padding: 10px 1px !important;
+    margin-right: 5rem;
+    margin-top: -10px;
+}

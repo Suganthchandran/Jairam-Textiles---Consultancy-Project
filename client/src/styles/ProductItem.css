@@ -1,0 +1,38 @@
+.product-item{
+    text-decoration: none;
+    color: black;
+    font-family: Montserrat;
+    margin-bottom: 1.5rem;
+}
+
+.product-item-imagebox{
+    margin-bottom: 1rem;
+}
+
+.product-item-image{
+    width: 90%;
+    border-radius: 4px;
+    border: 1px solid rgb(140, 140, 140);
+}
+
+.product-item-image:hover{
+    transform: scale(1.05);
+}
+
+.product-item-name{
+    width:90%;
+    margin-bottom: 0.5rem;
+}
+
+.product-item-price{
+    margin-top: 0.25rem;
+    font-weight: 600;
+}
+
+
+@media (max-width:450px) {
+    
+    .product-item-name{
+        font-size: 0.9rem;
+    }
+}

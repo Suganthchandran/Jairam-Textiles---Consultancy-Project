@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+.navbar {
+    height: 10vh;
+    width: 100%;
+    background-color: #ffffff;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo-image {
+    width: 65px;
+    height: 65px; 
+    cursor: pointer;
+}
+
+.navbar-elements {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navbar-elements-item {
+    font-size: 1.3rem;
+    font-weight: 900;
+    font-family: mooli;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-elements-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar-elements-item:hover::after {
+    width: 100%;
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbar-icons img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.navbar-dp-items {
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-dp-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgb(230, 229, 229);
+    width: 140px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding-top: 10px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.navbar-dp-dropdown.visible {
+    display: block;
+    opacity: 1;
+}
+
+
+.navbar-dp-dropdown-items {
+    cursor: pointer;
+    padding: 10px 20px;
+    padding-left: 30px;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: black;
+    text-align: left;
+    white-space: nowrap;
+    position: relative;
+}
+
+.navbar-dp-dropdown-items::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar-dp-dropdown-items:hover::after {
+    width: 100%;
+}
+
+.navbar-dp-dropdown-items:hover {
+    background-color: #f0f0f0;
+    font-weight: 700;
+}
+
+.navbar-dp-items:hover .navbar-dp-dropdown {
+    display: block;
+}
+
+.navbar-icons-cart{
+    position: relative;
+    cursor: pointer;
+}
+
+.navbar-cart-number {
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    padding: 0.25rem;
+    position: absolute;
+    top: 15px;
+    right: -4px; 
+    font-size: 0.8rem; 
+    width: 20px;
+    height: 20px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-hamburger{
+    display: none;
+    height: 20px !important;
+
+}
+
+.navbar-mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 20px;
+    padding-left: 20px;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+}
+  
+.navbar-mobile-menu-close {
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: -20px;
+    font-size: 4rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+  
+.navbar-mobile-menu-item {
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-mobile-menu-item:active{
+    background-color: black;
+}
+
+.navbar-mobile-menu-item::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar-mobile-menu-item:hover::after {
+    width: 100%;
+}
+  
+.navbar-mobile-menu-item:hover {
+    color: #555;
+}
+  
+
+@media (max-width:800px) {
+    .navbar-elements{
+        display: none;
+    }
+
+    .navbar-hamburger{
+        display: block;
+    }
+
+    .navbar {
+        height: 8vh;
+    }
+
+    .navbar-icons img{
+        width: 22px;
+        height: 22px;
+    }
+
+    .navbar-cart-number {
+        font-size: 0.7rem;
+        width: 16px;
+        height: 16px;
+    }
+
+    .navbar-logo-image {
+        width: 50px;
+        height: 50px; 
+    }
+}
+
+@media (max-width:370px) {
+    .navbar-logo-image{
+        width: 80px;
+    }
+
+    .navbar-icons img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar-mobile-menu-close{
+        font-size: 3rem;
+        margin-top: -10px;
+    }
+
+    .navbar-logo-image {
+        width: 40px;
+        height: 40px; 
+    }
+
+}

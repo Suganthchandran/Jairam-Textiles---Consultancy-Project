@@ -1,0 +1,33 @@
+.list-main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.list-table-head {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    border-width: 1px;
+    border-style: solid;
+    background-color: #f7fafc;
+    font-size: 1.2rem;
+}
+
+.list-table-content {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+    align-items: center;
+    gap:0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    border: 0.005px solid grey;    
+}
+
+.list-table-x {
+    cursor: pointer;
+}

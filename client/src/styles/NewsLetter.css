@@ -1,0 +1,46 @@
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+}
+
+.newsletter-title {
+    font-family: mooli;
+    font-size: 2.3rem;
+}
+
+.newsletter-desc {
+    color: grey;
+}
+
+.newsletter-form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem
+}
+
+.newsletter-input {
+    padding: 15px 20px;
+    width: 700px;
+    font-size: 1rem;
+    font-family: mooli;
+    margin-left: 4rem;
+}
+
+.newspaper-button {
+    background-color: black;
+    color: white;
+    font-size: 0.85rem;
+    padding: 15px;
+    margin-right: 5rem;
+    font-family: mooli;
+    cursor: pointer;
+}
+
+.newspaper-button:active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}

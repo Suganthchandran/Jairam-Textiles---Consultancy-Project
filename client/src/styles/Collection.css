@@ -1,0 +1,139 @@
+.collection {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid black;
+    padding: 3rem 5%;
+}
+
+@media (min-width: 640px) {
+    .collection-filter-icon {
+        display: none;
+    }
+
+    .category-filter {
+        display: block !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .collection {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .collection-right-up{
+        flex-direction: column;
+        gap : 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .collection-filter-text {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+.collection-filter-options {
+    min-width: 15rem;
+}
+
+.collection-filter-text {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+}
+
+.category-filter {
+    border: 1px solid #d1d5db;
+    padding-left: 1.25rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    margin-top: 1.5rem;
+    width: 200px;
+}
+
+.hidden {
+    display: none;
+}
+
+.categorise {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.categorise-content {
+    display: flex;
+    gap: 0.65rem;
+    color: rgb(95, 95, 95);
+}
+
+.categorise-content input {
+    width: 0.75rem;
+}
+
+.collection-filter-icon {
+    height: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.rotate-90 {
+    transform: rotate(90deg);
+}
+
+.category-title {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.collection-right{
+    flex: 1;
+    margin-top: 0.3rem;
+}
+
+.collection-right-up{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.collection-sort{
+    border: 2px solid rgb(175, 175, 175);
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-right: 35px;
+}
+
+.collection-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    row-gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .collection-products {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .collection-products {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
