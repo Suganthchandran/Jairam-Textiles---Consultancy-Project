@@ -1,33 +1,18 @@
 import React from 'react'
-import '../styles/Contact.css'
-import Title from '../components/Title'
-import NewsLetter from '../components/NewsLetter'
-import { assets } from '../assets/assets';
+import { assets } from '../assets/assets'
+import ContactForms from '../components/ContactForms'
 
 const Contact = () => {
   return (
-    <div className='contact'>
-        <Title title1={'CONTACT'} title2={'US'} size={'2.3rem'} position={'center'} />
-        <div className='contact-main'>
-          <div>
-            <img className='contact-main-image' src={assets.contact_img} />
-          </div>
-          <div className='contact-content'>
-              <p className='contact-content-head'>Our Store</p>
-              <div>
-              <p>2f/746 P&T Colony</p>
-              <p>14th Street, Thoothukudi - 628008</p>
-              </div>
-              <div>
-              <p>Tel: (+91) 9042482004</p>
-              <p>Email: suganthchandran07@gmail.com</p>
-              </div>
-              <p className='contact-content-head'>Carrers at Diago</p>
-              <p className='contact-jobs-desc'>Learn more about our teams and job openings.</p>
-              <button className='contact-button'>Explore Jobs</button>
-          </div>
+    <div className='relative min-h-screen w-screen overflow-x-hidden pt-14 flex flex-col items-center gap-6 mb-16'>
+        <div>
+            <img src={assets.Contact} alt='' />
         </div>
-        <NewsLetter />
+
+        <div>
+            <p className='font-bold text-[45px] mt-[-50px] flex items-center'>Contact Us</p>
+        </div>
+        <ContactForms/>
     </div>
   )
 }
