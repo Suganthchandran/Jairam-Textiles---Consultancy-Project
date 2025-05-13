@@ -16,7 +16,8 @@ const Orders = ({token}) => {
       return null
     }
     try {
-        const response = await axios.post('https://diago-backend.vercel.app/api/order/list',{},{headers:{token}})
+        // const response = await axios.post('https://diago-backend.vercel.app/api/order/list',{},{headers:{token}})
+        const response = await axios.post('http://localhost:4001/api/order/list',{},{headers:{token}})
         if(response.data.success) {
           setOrders(response.data.orders.reverse());
         }
@@ -32,7 +33,8 @@ const Orders = ({token}) => {
 
   const statusHandler = async (e, orderId)=> {
     try {
-      const response = await axios.post('https://diago-backend.vercel.app/api/order/status',{orderId, status: e.target.value},{headers:{token}});
+      // const response = await axios.post('https://diago-backend.vercel.app/api/order/status',{orderId, status: e.target.value},{headers:{token}});
+      const response = await axios.post('http://localhost:4001/api/order/status',{orderId, status: e.target.value},{headers:{token}});
       if(response.data.success) {
         await fetchAllOrders();
       }

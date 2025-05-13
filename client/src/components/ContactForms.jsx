@@ -15,7 +15,7 @@ const ContactForms = () => {
         <div className='flex flex-row gap-16'>
             {/* Left Form */}
           <Tilt> 
-             <div className='flex max-h-[350px] flex-1 max-w-[390px] flex-col item-center bg-black rounded-lg gap-4 text-white p-4 text-[10px]'>
+             <div className='flex max-h-[470px] flex-1 max-w-[390px] flex-col item-center bg-black rounded-lg gap-4 text-white p-4 text-[16px]'>
                 <p className='text-center'>CONTACT US</p>
 
                 {/* Phone and Address Info */}
@@ -74,14 +74,14 @@ const ContactForms = () => {
             </div>
             </Tilt>
             {/* Right Form */}
-            <div className='flex flex-4 max-w-[500px] flex-col gap-4 mt-[100px]'>
+            <div className='flex flex-4 max-w-[600px] flex-col gap-4 mt-[100px] text-[16px]'>
                 {/* Box Heading */}
                 <div>
                     <p className='font-bold'>KEEP IN TOUCH</p>
                 </div>
 
                 {/* Box Description */}
-                <div className='flex flex-col text-[10.4px]'>
+                <div className='flex flex-col'>
                     <p className=' justify-center'>We would love to hear from you and answer any questions you may have. You can contact us by filling out the form
                     below, sending us an email, or calling us on our phone number. We will get back to you as soon as possible. You can
                     also follow us on our social media platforms and subscribe to our newsletter to stay updated on our latest news and
@@ -89,7 +89,7 @@ const ContactForms = () => {
                 </div>
 
                 {/* Main Box */}
-                <div className='flex flex-col gap-2 text-[9px]'>
+                <div className='flex flex-col gap-2'>
                     <div>
                         <input type='text' placeholder='Name' className='w-full border border-gray-300 rounded-sm p-1' />
                     </div>

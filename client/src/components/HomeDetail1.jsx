@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const HomeDetail1 = () => {
   return (
-    <div className='flex flex-col item-center justify-center gap-6 mt-16'>
+    <div className='flex flex-col item-center justify-center gap-6 mt-24 mb-30'>
         <div className='flex flex-row items-center justify-center gap-8'>
             <div>
                 <img className='w-[600px]' src={assets.HomeDetail1} alt='' />

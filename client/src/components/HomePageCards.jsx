@@ -1,23 +1,24 @@
 import React from 'react';
 import Card from './Card';
+import { useNavigate } from 'react-router-dom';
 
 const HomePageCards = () => {
+    const navigate = useNavigate();
+
     const HomeCards = [
-        { image: "HomeCard1", text: "BedSheets" },
-        { image: "HomeCard2", text: "Towels" },
-        { image: "HomeCard3", text: "Kitchen Napkins" }
+        { image: "HomeCard1", text: "BedSheet", value: "BedSheet" },
+        { image: "HomeCard2", text: "Towel", value: "Towel" },
+        { image: "HomeCard3", text: "Kitchen Napkin", value: "KitchenNapkin" }
     ];
 
+    const handleClick = (categoryValue) => {
+        navigate('/collection', { state: { category: [categoryValue] } });
+    };
+
     return (
-        <div className="flex gap-4 justify-center items-center mt-16 p-10 rounded-lg bg-[linear-gradient(180deg,_rgba(102,102,102,0)_12.67%,_rgba(102,102,102,0.6)_31.67%,_rgba(0,0,0,0.5)_56.17%,_rgba(0,0,0,0)_96.31%)]
-"
-//             style={{
-//                 background:
-//                     "linear-gradient(180deg, rgba(75, 56, 123, 0) 0%, rgba(75, 56, 123, 0.576) 40.3%, rgba(75, 56, 123, 0.504) 74.33%, rgba(255, 255, 255, 0.576) 98.83%, rgba(255, 255, 255, 0.576) 118.9%)",
-//             }}
-        >
+        <div className="flex gap-4 justify-center items-center mt-16 p-10 rounded-lg">
             {HomeCards.map((item, index) => (
-                <div key={index}>
+                <div key={index} onClick={() => handleClick(item.value)}>
                     <Card image={item.image} text={item.text} />
                 </div>
             ))}

@@ -37,6 +37,7 @@ const Cart = () => {
       </div>
       <div>
         {
+          cardData.length > 0 ? (
           cardData.map((item, index) => {
             const productData = products.find((product) => product._id === item._id);
 
@@ -57,10 +58,19 @@ const Cart = () => {
               </div>
             )
           })
+        ) : (
+          <div className='flex flex-col items-center justify-center h-[70vh]'>
+              <h1 className='text-3xl font-bold text-gray-500'>Your Cart is Empty</h1>
+              <img src={assets.cart_empty} className='w-[500px]' alt="Empty Cart" />
+            </div>
+        )
         }
       </div>
 
-      <div className="cart-amount-container">
+      {
+        cardData.length > 0 ? (
+          <div>
+              <div className="cart-amount-container">
         <div className="cart-amount">
           <CartTotal />
         </div>
@@ -68,6 +78,9 @@ const Cart = () => {
       <div className="cart-payment-container">
         <button onClick={()=>navigate('/place-order')} className="cart-payment-button">PROCEED TO CHECKOUT</button>
       </div>
+          </div>
+        ) : null
+      }
 
     </div>
   )
