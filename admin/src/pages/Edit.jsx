@@ -9,8 +9,8 @@ const EditProduct = ({ token }) => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const [images, setImages] = useState([null, null, null, null]); // editable files
-  const [existingImageURLs, setExistingImageURLs] = useState([]); // display URLs
+  const [images, setImages] = useState([null, null, null, null]); 
+  const [existingImageURLs, setExistingImageURLs] = useState([]);
 
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
