@@ -22,8 +22,8 @@ const Orders = () => {
         return null
       }
 
-      // const response = await axios.post('https://diago-backend.vercel.app/api/order/userorders',{},{headers:{token}})
-      const response = await axios.post('http://localhost:4001/api/order/userorders', {}, { headers: { token } })
+      const response = await axios.post('https://jairam-tex-server.vercel.app/api/order/userorders',{},{headers:{token}})
+      // const response = await axios.post('http://localhost:4001/api/order/userorders', {}, { headers: { token } })
       if (response.data.success) {
         setOrderData(response.data.orders.reverse());
       }
@@ -35,7 +35,8 @@ const Orders = () => {
 
   const cancelOrder = async () => {
     try {
-      const response = await axios.post('http://localhost:4001/api/order/remove', { id: selectedOrderId }, { headers: { token } });
+      const response = await axios.post('https://jairam-tex-server.vercel.app/api/order/remove', { id: selectedOrderId }, { headers: { token } });
+      // const response = await axios.post('http://localhost:4001/api/order/remove', { id: selectedOrderId }, { headers: { token } });
       if (response.data.success) {
         toast.success(response.data.message);
         setShowModal(false);
