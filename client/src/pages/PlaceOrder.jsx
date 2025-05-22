@@ -49,11 +49,13 @@ const PlaceOrder = () => {
         }
       }
 
+      let totalAmount = Math.round((Number(getCartAmount()) + Number(delivery_fee)) * 100);
+
       let orderData = {
         address: formData,
         items: orderItems,
-        amount: getCartAmount() + delivery_fee
-      }
+        amount: totalAmount
+      };
 
       switch(method) {
 
