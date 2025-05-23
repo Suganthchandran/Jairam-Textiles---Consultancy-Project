@@ -29,7 +29,7 @@ const Banner = () => {
                 }}
             >
                 <marquee
-                    className="font-[Lalezar] text-[109.15px] tracking-normal banner-text text-[rgba(255,255,255,0.48)]"
+                    className="font-[Lalezar] text-[109.15px] font-bold tracking-normal banner-text text-[rgba(255,255,255,0.48)]"
                     scrollamount="20"
                     onMouseOver={(e) => e.target.stop()}
                     onMouseOut={(e) => e.target.start()}
